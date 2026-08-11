@@ -1,8 +1,9 @@
 import { cookies } from "next/headers";
 import { verifyToken } from "@/lib/auth";
 
-export function requireAdminToken() {
-  const token = cookies().get("admin_token")?.value;
+export async function requireAdminToken() {
+  const cookieStore = await cookies();
+  const token = cookieStore.get("admin_token")?.value;
   if (!token) {
     return null;
   }

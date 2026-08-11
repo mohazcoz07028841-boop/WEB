@@ -5,7 +5,7 @@ import { AdminInquiryList } from "@/components/AdminInquiryList";
 import { AdminLogoutButton } from "@/components/AdminLogoutButton";
 
 export default async function AdminInquiriesPage() {
-  const admin = getCurrentAdmin();
+  const admin = await getCurrentAdmin();
   if (!admin) redirect("/admin/login");
   const inquiries = await db.inquiry.findMany({ orderBy: { createdAt: "desc" } });
 

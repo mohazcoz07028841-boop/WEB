@@ -5,7 +5,7 @@ import { getCurrentAdmin } from "@/lib/auth";
 import { AdminLogoutButton } from "@/components/AdminLogoutButton";
 
 export default async function AdminDashboardPage() {
-  const admin = getCurrentAdmin();
+  const admin = await getCurrentAdmin();
   if (!admin) redirect("/admin/login");
   const stats = await getAdminStats();
 

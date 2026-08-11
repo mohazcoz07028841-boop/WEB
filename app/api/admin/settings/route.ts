@@ -3,7 +3,7 @@ import { db } from "@/lib/db";
 import { requireAdminToken } from "@/lib/admin";
 
 export async function POST(request: Request) {
-  const admin = requireAdminToken();
+  const admin = await requireAdminToken();
   if (!admin) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   const body = await request.json();
 

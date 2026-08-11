@@ -5,7 +5,7 @@ import { AdminSettingsForm } from "@/components/AdminSettingsForm";
 import { AdminLogoutButton } from "@/components/AdminLogoutButton";
 
 export default async function AdminSettingsPage() {
-  const admin = getCurrentAdmin();
+  const admin = await getCurrentAdmin();
   if (!admin) redirect("/admin/login");
   const settings = await getSettings();
 

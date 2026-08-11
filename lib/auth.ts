@@ -21,12 +21,13 @@ export function verifyToken(token: string) {
   return jwt.verify(token, secret) as { id: number; email: string; name: string };
 }
 
-export function getAdminCookieToken() {
-  return cookies().get(cookieName)?.value;
+export async function getAdminCookieToken() {
+  const cookieStore = await cookies();
+  return cookieStore.get(cookieName)?.value;
 }
 
-export function getCurrentAdmin() {
-  const token = getAdminCookieToken();
+export async function getCurrentAdmin() {
+  const token = await getAdminCookieToken();
   if (!token) return null;
 
   try {

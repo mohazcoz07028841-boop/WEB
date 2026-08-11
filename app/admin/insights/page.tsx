@@ -5,7 +5,7 @@ import { AdminInsightManager } from "@/components/AdminInsightManager";
 import { AdminLogoutButton } from "@/components/AdminLogoutButton";
 
 export default async function AdminInsightsPage() {
-  const admin = getCurrentAdmin();
+  const admin = await getCurrentAdmin();
   if (!admin) redirect("/admin/login");
   const insights = await db.insight.findMany({ orderBy: { createdAt: "desc" } });
 

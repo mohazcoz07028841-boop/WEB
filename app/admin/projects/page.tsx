@@ -5,7 +5,7 @@ import { AdminProjectManager } from "@/components/AdminProjectManager";
 import { AdminLogoutButton } from "@/components/AdminLogoutButton";
 
 export default async function AdminProjectsPage() {
-  const admin = getCurrentAdmin();
+  const admin = await getCurrentAdmin();
   if (!admin) redirect("/admin/login");
   const projects = await db.project.findMany({ orderBy: { createdAt: "desc" } });
 

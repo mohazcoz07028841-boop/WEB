@@ -5,7 +5,7 @@ import { AdminServiceManager } from "@/components/AdminServiceManager";
 import { AdminLogoutButton } from "@/components/AdminLogoutButton";
 
 export default async function AdminServicesPage() {
-  const admin = getCurrentAdmin();
+  const admin = await getCurrentAdmin();
   if (!admin) redirect("/admin/login");
   const services = await getPublishedServices();
 
