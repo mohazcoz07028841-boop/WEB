@@ -1,0 +1,98 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model AdminUser {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String
+  password  String
+  createdAt DateTime @default(now())
+}
+
+model Service {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String   @unique
+  category    String
+  summary     String
+  details     String
+  icon        String?
+  published   Boolean  @default(true)
+  updatedAt   DateTime @updatedAt
+  createdAt   DateTime @default(now())
+}
+
+model Project {
+  id            Int      @id @default(autoincrement())
+  title         String
+  slug          String   @unique
+  industry      String
+  location      String
+  clientType    String
+  challenge     String
+  solution      String
+  outcome       String
+  services      String
+  date          String
+  published     Boolean  @default(true)
+  featuredImage String?
+  updatedAt     DateTime @updatedAt
+  createdAt     DateTime @default(now())
+}
+
+model Insight {
+  id            Int      @id @default(autoincrement())
+  title         String
+  slug          String   @unique
+  category      String
+  excerpt       String
+  content       String
+  author        String
+  readTime      String
+  published     Boolean  @default(false)
+  publishedAt   DateTime?
+  featuredImage String?
+  updatedAt     DateTime @updatedAt
+  createdAt     DateTime @default(now())
+}
+
+model Inquiry {
+  id                Int      @id @default(autoincrement())
+  fullName          String
+  company           String?
+  email             String
+  phone             String
+  serviceRequired   String?
+  projectDescription String?
+  contactMethod     String?
+  preferredDate     String?
+  additionalInfo    String?
+  status            String   @default("NEW")
+  updatedAt         DateTime @updatedAt
+  createdAt         DateTime @default(now())
+}
+
+model Setting {
+  id              Int      @id @default(1)
+  companyName     String
+  tagline         String
+  phone           String
+  email           String
+  address         String
+  businessHours   String
+  facebookUrl     String?
+  linkedinUrl     String?
+  instagramUrl    String?
+  twitterUrl      String?
+  heroHeading     String?
+  heroSubheading  String?
+  heroCta         String?
+  heroSecondaryCta String?
+  aboutIntro      String?
+}
