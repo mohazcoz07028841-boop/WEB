@@ -2,6 +2,8 @@ import { getPublishedInsights } from "@/lib/queries";
 import { InsightCard } from "@/components/InsightCard";
 import { SectionHeader } from "@/components/SectionHeader";
 
+export const dynamic = "force-dynamic";
+
 export default async function InsightsPage() {
   const insights = await getPublishedInsights();
 

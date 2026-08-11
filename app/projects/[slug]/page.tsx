@@ -6,6 +6,8 @@ interface Props {
   params: { slug: string };
 }
 
+export const dynamic = "force-dynamic";
+
 export default async function ProjectDetailPage({ params }: Props) {
   const project = await getProjectBySlug(params.slug);
   if (!project) notFound();

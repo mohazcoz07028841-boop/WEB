@@ -2,6 +2,8 @@ import Link from "next/link";
 import { getPublishedServices } from "@/lib/queries";
 import { SectionHeader } from "@/components/SectionHeader";
 
+export const dynamic = "force-dynamic";
+
 export default async function ServicesPage() {
   const services = await getPublishedServices();
 

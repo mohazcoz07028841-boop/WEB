@@ -2,6 +2,8 @@ import { getSettings } from "@/lib/queries";
 import { SectionHeader } from "@/components/SectionHeader";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 export default async function AboutPage() {
   const settings = await getSettings();
 

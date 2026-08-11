@@ -4,7 +4,8 @@ import bcrypt from "bcrypt";
 const db = new PrismaClient();
 
 async function main() {
-  const password = await bcrypt.hash("StrongPass!2026", 10);
+  const seedPassword = process.env.ADMIN_PASSWORD ?? "StrongPass!2026";
+  const password = await bcrypt.hash(seedPassword, 10);
 
   await db.adminUser.upsert({
     where: { email: "admin@horizonalliance.co.ke" },

@@ -2,6 +2,8 @@ import { getSettings } from "@/lib/queries";
 import { SectionHeader } from "@/components/SectionHeader";
 import { InquiryForm } from "@/components/InquiryForm";
 
+export const dynamic = "force-dynamic";
+
 export default async function ContactPage() {
   const settings = await getSettings();
 

@@ -5,6 +5,8 @@ interface Props {
   params: { slug: string };
 }
 
+export const dynamic = "force-dynamic";
+
 export default async function InsightDetailPage({ params }: Props) {
   const insight = await getInsightBySlug(params.slug);
   if (!insight) notFound();

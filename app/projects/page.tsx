@@ -3,6 +3,8 @@ import { getPublishedProjects } from "@/lib/queries";
 import { SectionHeader } from "@/components/SectionHeader";
 import { ProjectCard } from "@/components/ProjectCard";
 
+export const dynamic = "force-dynamic";
+
 export default async function ProjectsPage() {
   const projects = await getPublishedProjects();
 
