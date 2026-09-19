@@ -20,7 +20,7 @@ export function Footer() {
             <p className="text-sm uppercase tracking-[0.35em] text-gold">Professional solutions</p>
             <h2 className="text-4xl font-semibold tracking-tight text-white">Professional solutions for businesses ready to move forward.</h2>
             <p className="max-w-2xl text-sm leading-7 text-slate-300">
-              Horizon Alliance combines real estate, technology, finance and marketing expertise with local market insight to help organisations make confident decisions and execute with precision.
+              Sudmo Company Limited combines real estate, technology, finance and marketing expertise with local market insight to help organisations make confident decisions and execute with precision.
             </p>
           </div>
           <div>
@@ -40,11 +40,11 @@ export function Footer() {
             <ul className="mt-6 space-y-3 text-sm text-slate-300">
               <li>
                 <span className="block text-slate-400">Phone</span>
-                <a href="tel:+254700000000" className="text-white hover:text-gold">+254 700 000 000</a>
+                <a href="tel:0713768539" className="text-white hover:text-gold">0713768539</a>
               </li>
               <li>
                 <span className="block text-slate-400">Email</span>
-                <a href="mailto:info@horizonalliance.co.ke" className="text-white hover:text-gold">info@horizonalliance.co.ke</a>
+                <a href="mailto:sudmocompany@gmail.com" className="text-white hover:text-gold">sudmocompany@gmail.com</a>
               </li>
               <li>
                 <span className="block text-slate-400">Location</span>
@@ -54,7 +54,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-14 border-t border-white/10 pt-8 text-sm text-slate-400 sm:flex sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Horizon Alliance. Premium professional services across East Africa.</p>
+          <p>© {new Date().getFullYear()} Sudmo Company Limited. Premium professional services across East Africa.</p>
           <div className="mt-4 flex flex-wrap gap-4 sm:mt-0">
             <Link href="#" className="transition hover:text-gold">LinkedIn</Link>
             <Link href="#" className="transition hover:text-gold">Twitter</Link>

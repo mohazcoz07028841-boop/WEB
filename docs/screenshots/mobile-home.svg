@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="375" height="812" viewBox="0 0 375 812" xmlns="http://www.w3.org/2000/svg">
+  <rect width="375" height="812" fill="#F9FAFB"/>
+  <rect x="0" y="0" width="375" height="96" fill="url(#header-gradient)"/>
+  <defs>
+    <linearGradient id="header-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#433879"/>
+      <stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+  </defs>
+  <text x="187.5" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">sudmo comapny limited</text>
+  <text x="187.5" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#E0E0FF">One leave day, four days off</text>
+
+  <text x="24" y="124" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#374151">Select year</text>
+  <rect x="16" y="132" width="343" height="36" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1" rx="8"/>
+  <text x="28" y="156" font-family="system-ui, sans-serif" font-size="12" fill="#111827">2027</text>
+  <polygon points="334,152 338,158 334,162" fill="#6B7280"/>
+
+  <text x="24" y="186" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#111827">All Public Holidays</text>
+  <rect x="16" y="200" width="343" height="20" fill="#F3F4F6" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="22" y="216" font-family="system-ui, sans-serif" font-size="9" font-weight="500" fill="#6B7280">DATE</text>
+  <text x="82" y="216" font-family="system-ui, sans-serif" font-size="9" font-weight="500" fill="#6B7280">DAY</text>
+  <text x="140" y="216" font-family="system-ui, sans-serif" font-size="9" font-weight="500" fill="#6B7280">NAME</text>
+  <text x="275" y="216" font-family="system-ui, sans-serif" font-size="9" font-weight="500" fill="#6B7280">TYPE</text>
+  <rect x="16" y="220" width="343" height="32" fill="#FFFFFF"/>
+  <text x="22" y="242" font-family="system-ui, sans-serif" font-size="10" fill="#111827">Jan 1</text>
+  <text x="82" y="242" font-family="system-ui, sans-serif" font-size="10" fill="#2563EB">Fri</text>
+  <text x="140" y="242" font-family="system-ui, sans-serif" font-size="10" fill="#111827">New Year's Day</text>
+  <text x="275" y="242" font-family="system-ui, sans-serif" font-size="9" fill="#1E40AF">Public</text>
+  <rect x="16" y="252" width="343" height="32" fill="#FFFFFF"/>
+  <text x="22" y="274" font-family="system-ui, sans-serif" font-size="10" fill="#111827">Mar 26</text>
+  <text x="82" y="274" font-family="system-ui, sans-serif" font-size="10" fill="#2563EB">Fri</text>
+  <text x="140" y="274" font-family="system-ui, sans-serif" font-size="10" fill="#111827">Good Friday</text>
+  <text x="275" y="274" font-family="system-ui, sans-serif" font-size="9" fill="#1E40AF">Public</text>
+
+  <text x="24" y="310" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#111827">Bridge-Day Long Weekends</text>
+  <text x="24" y="330" font-family="system-ui, sans-serif" font-size="10" fill="#6B7280">Tap to maximize your days off</text>
+
+  <rect x="16" y="340" width="343" height="120" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1" rx="8"/>
+  <rect x="16" y="340" width="343" height="24" fill="#EEF2FF" rx="8 0 0 0"/>
+  <text x="24" y="358" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#433879">TAKE 1 DAY OFF</text>
+  <text x="24" y="380" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#111827">New Year's Day</text>
+  <text x="24" y="396" font-family="system-ui, sans-serif" font-size="10" fill="#6B7280">Thu Dec 31 \u2013 Fri Jan 1</text>
+  <text x="312" y="380" text-anchor="end" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#433879">4</text>
+  <text x="24" y="414" font-family="system-ui, sans-serif" font-size="10" fill="#6B7280">4 days off, 1 leave day</text>
+
+  <rect x="16" y="472" width="343" height="120" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1" rx="8"/>
+  <rect x="16" y="472" width="343" height="24" fill="#D1FAE5" rx="8 0 0 0"/>
+  <text x="24" y="490" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#059669">FREE \u2014 0 LEAVE</text>
+  <text x="24" y="512" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#111827">Easter Weekend</text>
+  <text x="24" y="528" font-family="system-ui, sans-serif" font-size="10" fill="#6B7280">Fri Mar 26 \u2013 Mon Mar 29</text>
+  <text x="312" y="512" text-anchor="end" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#059669">4</text>
+  <text x="24" y="552" font-family="system-ui, sans-serif" font-size="10" fill="#6B7280">No leave needed</text>
+
+  <rect x="16" y="604" width="343" height="120" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1" rx="8"/>
+  <rect x="16" y="604" width="343" height="24" fill="#EEF2FF" rx="8 0 0 0"/>
+  <text x="24" y="622" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#433879">TAKE 1 DAY OFF</text>
+  <text x="24" y="644" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#111827">Madaraka Day</text>
+  <text x="24" y="660" font-family="system-ui, sans-serif" font-size="10" fill="#6B7280">Fri May 30 \u2013 Mon Jun 1</text>
+  <text x="312" y="644" text-anchor="end" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#433879">4</text>
+  <text x="24" y="686" font-family="system-ui, sans-serif" font-size="10" fill="#6B7280">4 days off, 1 leave day</text>
+
+  <rect x="0" y="760" width="375" height="52" fill="#1F2937"/>
+  <text x="187.5" y="774" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#9CA3A4">Nager.Date API</text>
+  <text x="187.5" y="788" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#6B7280">MIT License</text>
+</svg>

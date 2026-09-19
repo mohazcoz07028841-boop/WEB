@@ -21,10 +21,16 @@ export default async function AdminSettingsPage() {
         </div>
         <AdminSettingsForm settings={{
           companyName: settings?.companyName ?? "",
+          tagline: settings?.tagline ?? "",
           phone: settings?.phone ?? "",
           email: settings?.email ?? "",
           address: settings?.address ?? "",
           businessHours: settings?.businessHours ?? "",
+          heroHeading: settings?.heroHeading ?? "",
+          heroSubheading: settings?.heroSubheading ?? "",
+          heroCta: settings?.heroCta ?? "",
+          heroSecondaryCta: settings?.heroSecondaryCta ?? "",
+          aboutIntro: settings?.aboutIntro ?? "",
           linkedinUrl: settings?.linkedinUrl ?? "",
           facebookUrl: settings?.facebookUrl ?? "",
           instagramUrl: settings?.instagramUrl ?? "",

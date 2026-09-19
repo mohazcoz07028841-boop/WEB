@@ -4,13 +4,14 @@ import { getServiceBySlug } from "@/lib/queries";
 import { SectionHeader } from "@/components/SectionHeader";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export const dynamic = "force-dynamic";
 
 export default async function ServiceDetailPage({ params }: Props) {
-  const service = await getServiceBySlug(params.slug);
+  const { slug } = await params;
+  const service = await getServiceBySlug(slug);
   if (!service) notFound();
 
   return (

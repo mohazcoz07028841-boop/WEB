@@ -8,10 +8,10 @@ async function main() {
   const password = await bcrypt.hash(seedPassword, 10);
 
   await db.adminUser.upsert({
-    where: { email: "admin@horizonalliance.co.ke" },
+    where: { email: "sudmocompany@gmail.com" },
     update: { password },
     create: {
-      email: "admin@horizonalliance.co.ke",
+      email: "sudmocompany@gmail.com",
       name: "Administrator",
       password,
     },
@@ -20,10 +20,10 @@ async function main() {
   await db.setting.upsert({
     where: { id: 1 },
     update: {
-      companyName: "Horizon Alliance",
+      companyName: "Sudmo Company Limited",
       tagline: "Building better businesses, properties and digital solutions.",
-      phone: "+254 700 000 000",
-      email: "info@horizonalliance.co.ke",
+      phone: "0713768539",
+      email: "sudmocompany@gmail.com",
       address: "Nairobi, Kenya",
       businessHours: "Mon–Fri, 8:00–17:00",
       facebookUrl: "#",
@@ -39,10 +39,10 @@ async function main() {
         "We combine real estate, technology, finance and business advisory expertise to help East African organizations operate with clarity and confidence.",
     },
     create: {
-      companyName: "Horizon Alliance",
+      companyName: "Sudmo Company Limited",
       tagline: "Building better businesses, properties and digital solutions.",
-      phone: "+254 700 000 000",
-      email: "info@horizonalliance.co.ke",
+      phone: "0713768539",
+      email: "sudmocompany@gmail.com",
       address: "Nairobi, Kenya",
       businessHours: "Mon–Fri, 8:00–17:00",
       facebookUrl: "#",
@@ -196,7 +196,7 @@ async function main() {
         "Professional services firms win responsibility by delivering transparent advice, consistent execution and measurable value across every engagement.",
       content:
         "Quality service delivery begins with listening to client priorities, aligning senior professionals to the work and providing clear progress updates throughout the engagement.",
-      author: "Horizon Alliance Team",
+      author: "Sudmo Company Limited",
       readTime: "4 min",
       published: true,
       publishedAt: new Date(),
@@ -209,7 +209,7 @@ async function main() {
         "A practical IT plan helps SMEs reduce costs, automate workflows, and improve reporting without unnecessary complexity.",
       content:
         "The most effective technology plans start with a clear understanding of current operations, prioritized automation and a strong delivery roadmap tied to business outcomes.",
-      author: "Horizon Alliance Team",
+      author: "Sudmo Company Limited",
       readTime: "3 min",
       published: true,
       publishedAt: new Date(),
@@ -222,11 +222,11 @@ async function main() {
         "Organised financial records are the foundation for budgeting, performance insight and confident decision-making.",
       content:
         "Bookkeeping is more than compliance; it is the first step toward building a financial management culture that supports growth and resilience.",
-      author: "Horizon Alliance Team",
+      author: "Sudmo Company Limited",
       readTime: "3 min",
       published: true,
       publishedAt: new Date(),
-    },
+   },
   ];
 
   for (const insight of insights) {

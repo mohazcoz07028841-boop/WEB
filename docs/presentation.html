@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sudmo comapny limited - Presentation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .slide {
+      page-break-after: always;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 2rem;
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+  <section class="slide bg-gradient-to-br from-indigo-800 to-purple-900 text-white">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">sudmo comapny limited</h1>
+    <p class="text-xl md:text-2xl mb-6 opacity-90">One leave day, four days off.</p>
+    <p class="text-lg mb-8">Built by: Jane Doe</p>
+    <p class="text-md opacity-80 break-all">https://sudmo-comapny-limited.vercel.app</p>
+    <div class="mt-8 text-xs opacity-60">Slide 1 of 8</div>
+  </section>
+
+  <section class="slide">
+    <h2 class="text-3xl font-bold mb-6 text-center">The Problem</h2>
+    <p class="text-lg text-center max-w-2xl mb-4">
+      Kenyans plan leave around public holidays, but finding which holidays create
+      long weekends requires cross-checking calendars by hand every year.
+    </p>
+    <p class="text-lg text-center max-w-2xl mb-4">
+      Most people miss bridge-day opportunities &mdash; a Friday holiday means
+      Thursday is free, a Monday holiday means Friday is free.
+    </p>
+    <p class="text-center text-sm text-gray-500 mt-6">Slide 2 of 8</p>
+  </section>
+
+  <section class="slide">
+    <h2 class="text-3xl font-bold mb-6 text-center">The Solution</h2>
+    <p class="text-lg text-center max-w-2xl mb-6">
+      A single-page app that fetches Kenya's public holidays and detects
+      bridge-day long weekends &mdash; automatically ranking them by
+      days-off per leave-day taken.
+    </p>
+    <img src="docs/screenshots/desktop-home.svg" alt="sudmo comapny limited app screenshot" class="max-w-full h-auto rounded-lg shadow-lg border" />
+    <p class="text-center text-sm text-gray-500 mt-6">Slide 3 of 8</p>
+  </section>
+
+  <section class="slide">
+    <h2 class="text-4xl font-bold text-center">Demo</h2>
+    <p class="text-xl text-center mt-8 text-gray-600">Switching to the live site</p>
+    <p class="text-center text-sm text-gray-500 mt-6">Slide 4 of 8</p>
+  </section>
+
+  <section class="slide">
+    <h2 class="text-3xl font-bold mb-6 text-center">How It Works</h2>
+    <div class="flex flex-col md:flex-row items-center gap-8">
+      <img src="docs/screenshots/mobile-home.svg" alt="Mobile view" class="md:w-1/2 h-auto rounded-lg shadow-lg border" />
+      <div class="md:w-1/2 text-center">
+        <div class="space-y-4">
+          <div class="bg-indigo-50 p-3 rounded">Browser requests holiday data</div>
+          <div class="bg-purple-50 p-3 rounded">Fetch API calls Nager.Date</div>
+          <div class="bg-blue-50 p-3 rounded">JSON returns to the DOM</div>
+          <div class="bg-green-50 p-3 rounded">Bridge-day algorithm highlights long weekends</div>
+        </div>
+        <p class="text-sm text-gray-500 mt-4">Stack: HTML5, Tailwind, Vanilla JS</p>
+      </div>
+    </div>
+    <p class="text-center text-sm text-gray-500 mt-6">Slide 5 of 8</p>
+  </section>
+
+  <section class="slide">
+    <h2 class="text-3xl font-bold mb-6 text-center">The Hard Part</h2>
+    <p class="text-lg text-center max-w-2xl mb-4">
+      The bridge-day algorithm had to handle several edge cases:
+    </p>
+    <ul class="text-left max-w-xl mx-auto space-y-2 mb-4">
+      <li class="flex items-start"><span class="font-medium">1.</span><span class="ml-2">Holiday on Tuesday &rarr; take Friday off (5 days, not Monday)</span></li>
+      <li class="flex items-start"><span class="font-medium">2.</span><span class="ml-2">Two holidays close together (Easter) &rarr; free long weekend, 0 leave</span></li>
+      <li class="flex items-start"><span class="font-medium">3.</span><span class="ml-2">Weekend holidays &rarr; bridge day may already be a holiday</span></li>
+      <li class="flex items-start"><span class="font-medium">4.</span><span class="ml-2">Wednesday holidays &rarr; no single-day bridge possible</span></li>
+    </ul>
+    <p class="text-center text-sm text-gray-500 mt-4">Solution: walk day-by-day from the bridge date, counting weekends + adjacent holidays</p>
+    <p class="text-center text-sm text-gray-500">Slide 6 of 8</p>
+  </section>
+
+  <section class="slide">
+    <h2 class="text-3xl font-bold mb-6 text-center">What&rsquo;s Next</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl">
+      <div class="bg-gray-50 p-4 rounded-lg">
+        <h3 class="font-semibold text-indigo-700">Should</h3>
+        <ul class="text-sm text-gray-600 mt-1">
+          <li>&bull; Compare two countries&rsquo; calendars</li>
+          <li>&bull; Email/SMS reminders</li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 p-4 rounded-lg">
+        <h3 class="font-semibold text-indigo-700">Could</h3>
+        <ul class="text-sm text-gray-600 mt-1">
+          <li>&bull; Export long weekends as CSV</li>
+          <li>&bull; Dark mode toggle</li>
+          <li>&bull; PWA install support</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-center text-sm text-gray-500 mt-6">Slide 7 of 8</p>
+  </section>
+
+  <section class="slide">
+    <h2 class="text-3xl font-bold mb-8 text-center">Links</h2>
+    <div class="flex flex-col gap-4 max-w-md">
+      <a href="https://sudmo-comapny-limited.vercel.app" class="text-left p-4 bg-indigo-50 rounded-lg hover:bg-indigo-100 transition-colors">
+        <span class="font-semibold text-indigo-800">Live Site</span>
+        <span class="block text-sm text-gray-600 break-all">sudmo-comapny-limited.vercel.app</span>
+      </a>
+      <a href="https://github.com/username/sudmo-comapny-limited" class="text-left p-4 bg-gray-50 rounded-lg hover:bg-gray-200 transition-colors">
+        <span class="font-semibold">GitHub Repo</span>
+        <span class="block text-sm text-gray-600 break-all">github.com/username/sudmo-comapny-limited</span>
+      </a>
+      <a href="https://figma.com/file/sudmo-comapny-limited" class="text-left p-4 bg-gray-50 rounded-lg hover:bg-gray-200 transition-colors">
+        <span class="font-semibold">Design (Figma)</span>
+        <span class="block text-sm text-gray-600 break-all">figma.com/file/sudmo-comapny-limited</span>
+      </a>
+    </div>
+    <p class="text-center text-sm text-gray-500 mt-6">Slide 8 of 8</p>
+  </section>
+</body>
+</html>

@@ -1,13 +1,13 @@
 import { redirect } from "next/navigation";
 import { getCurrentAdmin } from "@/lib/auth";
-import { getPublishedServices } from "@/lib/queries";
+import { db } from "@/lib/db";
 import { AdminServiceManager } from "@/components/AdminServiceManager";
 import { AdminLogoutButton } from "@/components/AdminLogoutButton";
 
 export default async function AdminServicesPage() {
   const admin = await getCurrentAdmin();
   if (!admin) redirect("/admin/login");
-  const services = await getPublishedServices();
+  const services = await db.service.findMany({ orderBy: { createdAt: "desc" } });
 
   return (
     <main className="min-h-screen bg-warm py-12">

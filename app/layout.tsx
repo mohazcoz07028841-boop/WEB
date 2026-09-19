@@ -9,13 +9,13 @@ import { PageTransition } from "@/components/PageTransition";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap", weight: ["400", "500", "600", "700", "800"] });
 
 export const metadata: Metadata = {
-  title: "Horizon Alliance | Professional Services Kenya",
+  title: "Sudmo Company Limited | Professional Services Kenya",
   description:
-    "Horizon Alliance provides premium real estate, technology, finance, marketing and business advisory services across Kenya and East Africa.",
+    "Sudmo Company Limited provides premium real estate, technology, finance, marketing and business advisory services across Kenya and East Africa.",
   openGraph: {
-    title: "Horizon Alliance | Professional Services Kenya",
+    title: "Sudmo Company Limited | Professional Services Kenya",
     description:
-      "Horizon Alliance provides premium real estate, technology, finance, marketing and business advisory services across Kenya and East Africa.",
+      "Sudmo Company Limited provides premium real estate, technology, finance, marketing and business advisory services across Kenya and East Africa.",
     type: "website",
   },
   metadataBase: new URL("https://horizonalliance.co.ke"),
