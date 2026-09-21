@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { getCurrentAdmin } from "@/lib/auth";
 import { getSettings } from "@/lib/queries";
 import { AdminSettingsForm } from "@/components/AdminSettingsForm";
+import { AdminPasswordForm } from "@/components/AdminPasswordForm";
 import { AdminLogoutButton } from "@/components/AdminLogoutButton";
 
 export default async function AdminSettingsPage() {
@@ -19,23 +20,26 @@ export default async function AdminSettingsPage() {
           </div>
           <AdminLogoutButton />
         </div>
-        <AdminSettingsForm settings={{
-          companyName: settings?.companyName ?? "",
-          tagline: settings?.tagline ?? "",
-          phone: settings?.phone ?? "",
-          email: settings?.email ?? "",
-          address: settings?.address ?? "",
-          businessHours: settings?.businessHours ?? "",
-          heroHeading: settings?.heroHeading ?? "",
-          heroSubheading: settings?.heroSubheading ?? "",
-          heroCta: settings?.heroCta ?? "",
-          heroSecondaryCta: settings?.heroSecondaryCta ?? "",
-          aboutIntro: settings?.aboutIntro ?? "",
-          linkedinUrl: settings?.linkedinUrl ?? "",
-          facebookUrl: settings?.facebookUrl ?? "",
-          instagramUrl: settings?.instagramUrl ?? "",
-          twitterUrl: settings?.twitterUrl ?? "",
-        }} />
+        <div className="space-y-8">
+          <AdminSettingsForm settings={{
+            companyName: settings?.companyName ?? "",
+            tagline: settings?.tagline ?? "",
+            phone: settings?.phone ?? "",
+            email: settings?.email ?? "",
+            address: settings?.address ?? "",
+            businessHours: settings?.businessHours ?? "",
+            heroHeading: settings?.heroHeading ?? "",
+            heroSubheading: settings?.heroSubheading ?? "",
+            heroCta: settings?.heroCta ?? "",
+            heroSecondaryCta: settings?.heroSecondaryCta ?? "",
+            aboutIntro: settings?.aboutIntro ?? "",
+            linkedinUrl: settings?.linkedinUrl ?? "",
+            facebookUrl: settings?.facebookUrl ?? "",
+            instagramUrl: settings?.instagramUrl ?? "",
+            twitterUrl: settings?.twitterUrl ?? "",
+          }} />
+          <AdminPasswordForm />
+        </div>
       </div>
     </main>
   );
