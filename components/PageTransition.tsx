@@ -10,11 +10,11 @@ export function PageTransition({ children }: { children: ReactNode }) {
   useLayoutEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(false);
-    const timeout = window.setTimeout(() => setMounted(true), 20);
-    return () => window.clearTimeout(timeout);
+    const frame = window.requestAnimationFrame(() => setMounted(true));
+    return () => window.cancelAnimationFrame(frame);
   }, [pathname]);
 
   return (
-    <div className={`transition duration-500 ease-out ${mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"}`}>{children}</div>
+    <div className={`transition duration-200 ease-out ${mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"}`}>{children}</div>
   );
 }
