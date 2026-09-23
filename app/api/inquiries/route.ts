@@ -4,17 +4,40 @@ import { sendInquiryEmail } from "@/lib/email";
 
 export async function POST(request: Request) {
   const body = await request.json();
+
+  const requiredFields = [
+    "fullName",
+    "email",
+    "phone",
+    "serviceRequired",
+    "projectDescription",
+    "contactMethod",
+    "preferredDate",
+  ] as const;
+
+  const missing = requiredFields.filter((field) => {
+    const value = body?.[field];
+    return value === undefined || value === null || String(value).trim() === "";
+  });
+
+  if (missing.length > 0) {
+    return NextResponse.json(
+      { error: "Please complete all required fields before submitting." },
+      { status: 400 }
+    );
+  }
+
   const inquiry = await db.inquiry.create({
     data: {
       fullName: String(body.fullName || "").trim(),
-      company: body.company ? String(body.company) : null,
+      company: body.company ? String(body.company).trim() : null,
       email: String(body.email || "").trim(),
       phone: String(body.phone || "").trim(),
-      serviceRequired: body.serviceRequired ? String(body.serviceRequired) : null,
-      projectDescription: body.projectDescription ? String(body.projectDescription) : null,
-      contactMethod: body.contactMethod ? String(body.contactMethod) : null,
-      preferredDate: body.preferredDate ? String(body.preferredDate) : null,
-      additionalInfo: body.additionalInfo ? String(body.additionalInfo) : null,
+      serviceRequired: String(body.serviceRequired).trim(),
+      projectDescription: String(body.projectDescription).trim(),
+      contactMethod: String(body.contactMethod).trim(),
+      preferredDate: String(body.preferredDate).trim(),
+      additionalInfo: body.additionalInfo ? String(body.additionalInfo).trim() : null,
     },
   });
 
