@@ -63,12 +63,12 @@ export default async function HomePage() {
                 <div className="rounded-[32px] border border-white/10 bg-slate-950/95 p-7">
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div className="rounded-3xl bg-white/5 p-5 text-sm text-slate-200">
-                      <p className="text-4xl font-semibold text-gold">Market</p>
-                      <p className="mt-2 uppercase tracking-[0.35em] text-slate-400">Insight</p>
+                      <p className="text-4xl font-semibold text-gold">2+</p>
+                      <p className="mt-2 uppercase tracking-[0.35em] text-slate-400">Years of experience</p>
                     </div>
                     <div className="rounded-3xl bg-white/5 p-5 text-sm text-slate-200">
-                      <p className="text-4xl font-semibold text-gold">Strategic</p>
-                      <p className="mt-2 uppercase tracking-[0.35em] text-slate-400">Support</p>
+                      <p className="text-4xl font-semibold text-gold">2024</p>
+                      <p className="mt-2 uppercase tracking-[0.35em] text-slate-400">Founded</p>
                     </div>
                   </div>
                 </div>
