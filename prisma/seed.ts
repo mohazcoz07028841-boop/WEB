@@ -4,14 +4,15 @@ import bcrypt from "bcrypt";
 const db = new PrismaClient();
 
 async function main() {
+  const adminEmail = process.env.ADMIN_EMAIL ?? "sudmocompany@gmail.com";
   const seedPassword = process.env.ADMIN_PASSWORD ?? "StrongPass!2026";
   const password = await bcrypt.hash(seedPassword, 10);
 
   await db.adminUser.upsert({
-    where: { email: "sudmocompany@gmail.com" },
+    where: { email: adminEmail },
     update: { password },
     create: {
-      email: "sudmocompany@gmail.com",
+      email: adminEmail,
       name: "Administrator",
       password,
     },
@@ -23,7 +24,7 @@ async function main() {
       companyName: "Sudmo Company Limited",
       tagline: "Building better businesses, properties and digital solutions.",
       phone: "0713768539",
-      email: "sudmocompany@gmail.com",
+      email: adminEmail,
       address: "Nairobi, Kenya",
       businessHours: "Mon–Fri, 8:00–17:00",
       facebookUrl: "#",
@@ -42,7 +43,7 @@ async function main() {
       companyName: "Sudmo Company Limited",
       tagline: "Building better businesses, properties and digital solutions.",
       phone: "0713768539",
-      email: "sudmocompany@gmail.com",
+      email: adminEmail,
       address: "Nairobi, Kenya",
       businessHours: "Mon–Fri, 8:00–17:00",
       facebookUrl: "#",
