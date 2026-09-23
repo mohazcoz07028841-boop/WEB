@@ -53,13 +53,12 @@ export function Navigation() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={`transition ${
-                      active
-                        ? "text-charcoal before:block before:h-0.5 before:w-full before:bg-gold before:mt-1"
-                        : "text-slate-600 hover:text-charcoal"
+                    className={`relative inline-flex flex-col items-center transition ${
+                      active ? "text-charcoal" : "text-slate-600 hover:text-charcoal"
                     }`}
                   >
-                    {link.label}
+                    <span>{link.label}</span>
+                    {active ? <span className="mt-1 block h-0.5 w-full bg-gold" /> : null}
                   </Link>
                 </li>
               );
