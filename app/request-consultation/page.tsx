@@ -1,5 +1,22 @@
+import type { Metadata } from "next";
 import { SectionHeader } from "@/components/SectionHeader";
 import { InquiryForm } from "@/components/InquiryForm";
+
+export const metadata: Metadata = {
+  title: "Request a Consultation | SUDMO Company Limited",
+  description:
+    "Request a consultation with SUDMO Company Limited in Kenya for business, real estate, technology, warehousing and supply enquiries.",
+  alternates: {
+    canonical: "https://web-mfik-eight.vercel.app/request-consultation",
+  },
+  openGraph: {
+    title: "Request a Consultation | SUDMO Company Limited",
+    description:
+      "Request a consultation with SUDMO Company Limited in Kenya for business, real estate, technology, warehousing and supply enquiries.",
+    url: "https://web-mfik-eight.vercel.app/request-consultation",
+    type: "website",
+  },
+};
 
 export default function RequestConsultationPage() {
   return (

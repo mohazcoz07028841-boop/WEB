@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProjectBySlug } from "@/lib/queries";
@@ -7,6 +8,28 @@ interface Props {
 }
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const project = await getProjectBySlug(params.slug);
+
+  return {
+    title: project ? `${project.title} | SUDMO Company Limited` : "Project | SUDMO Company Limited",
+    description: project
+      ? `${project.challenge} ${project.solution} SUDMO Company Limited delivered this project in ${project.location}.`
+      : "SUDMO Company Limited project and case study in Kenya.",
+    alternates: {
+      canonical: `https://web-mfik-eight.vercel.app/projects/${params.slug}`,
+    },
+    openGraph: {
+      title: project ? `${project.title} | SUDMO Company Limited` : "Project | SUDMO Company Limited",
+      description: project
+        ? `${project.challenge} ${project.solution} SUDMO Company Limited delivered this project in ${project.location}.`
+        : "SUDMO Company Limited project and case study in Kenya.",
+      url: `https://web-mfik-eight.vercel.app/projects/${params.slug}`,
+      type: "website",
+    },
+  };
+}
 
 export default async function ProjectDetailPage({ params }: Props) {
   const project = await getProjectBySlug(params.slug);

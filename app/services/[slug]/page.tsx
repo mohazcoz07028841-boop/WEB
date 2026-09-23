@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getServiceBySlug } from "@/lib/queries";
@@ -8,6 +9,29 @@ interface Props {
 }
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const service = await getServiceBySlug(slug);
+
+  return {
+    title: service ? `${service.title} | SUDMO Company Limited` : "Service | SUDMO Company Limited",
+    description: service
+      ? `${service.summary} SUDMO Company Limited offers ${service.title.toLowerCase()} services in Kenya and East Africa.`
+      : "SUDMO Company Limited service offering in Kenya and East Africa.",
+    alternates: {
+      canonical: `https://web-mfik-eight.vercel.app/services/${slug}`,
+    },
+    openGraph: {
+      title: service ? `${service.title} | SUDMO Company Limited` : "Service | SUDMO Company Limited",
+      description: service
+        ? `${service.summary} SUDMO Company Limited offers ${service.title.toLowerCase()} services in Kenya and East Africa.`
+        : "SUDMO Company Limited service offering in Kenya and East Africa.",
+      url: `https://web-mfik-eight.vercel.app/services/${slug}`,
+      type: "website",
+    },
+  };
+}
 
 export default async function ServiceDetailPage({ params }: Props) {
   const { slug } = await params;

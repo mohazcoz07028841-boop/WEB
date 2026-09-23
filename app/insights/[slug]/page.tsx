@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getInsightBySlug } from "@/lib/queries";
 
@@ -6,6 +7,28 @@ interface Props {
 }
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const insight = await getInsightBySlug(params.slug);
+
+  return {
+    title: insight ? `${insight.title} | SUDMO Company Limited` : "Insight | SUDMO Company Limited",
+    description: insight
+      ? `${insight.excerpt} Read SUDMO Company Limited insights on business, technology and growth in Kenya and East Africa.`
+      : "SUDMO Company Limited insight article in Kenya and East Africa.",
+    alternates: {
+      canonical: `https://web-mfik-eight.vercel.app/insights/${params.slug}`,
+    },
+    openGraph: {
+      title: insight ? `${insight.title} | SUDMO Company Limited` : "Insight | SUDMO Company Limited",
+      description: insight
+        ? `${insight.excerpt} Read SUDMO Company Limited insights on business, technology and growth in Kenya and East Africa.`
+        : "SUDMO Company Limited insight article in Kenya and East Africa.",
+      url: `https://web-mfik-eight.vercel.app/insights/${params.slug}`,
+      type: "website",
+    },
+  };
+}
 
 export default async function InsightDetailPage({ params }: Props) {
   const insight = await getInsightBySlug(params.slug);

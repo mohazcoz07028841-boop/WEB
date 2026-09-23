@@ -1,8 +1,25 @@
+import type { Metadata } from "next";
 import { getSettings } from "@/lib/queries";
 import { SectionHeader } from "@/components/SectionHeader";
 import { InquiryForm } from "@/components/InquiryForm";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Contact SUDMO Company Limited | Nairobi, Kenya",
+  description:
+    "Contact SUDMO Company Limited in Nairobi, Kenya for real estate, business consultancy, IT planning, warehousing and quality electronics and computer equipment enquiries.",
+  alternates: {
+    canonical: "https://web-mfik-eight.vercel.app/contact",
+  },
+  openGraph: {
+    title: "Contact SUDMO Company Limited | Nairobi, Kenya",
+    description:
+      "Contact SUDMO Company Limited in Nairobi, Kenya for real estate, business consultancy, IT planning, warehousing and quality electronics and computer equipment enquiries.",
+    url: "https://web-mfik-eight.vercel.app/contact",
+    type: "website",
+  },
+};
 
 export default async function ContactPage() {
   const settings = await getSettings();

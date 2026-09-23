@@ -1,8 +1,25 @@
+import type { Metadata } from "next";
 import { getPublishedInsights } from "@/lib/queries";
 import { InsightCard } from "@/components/InsightCard";
 import { SectionHeader } from "@/components/SectionHeader";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "SUDMO Insights | Business, Technology & Growth Articles Kenya",
+  description:
+    "Read SUDMO Company Limited insights on business strategy, technology, finance and practical growth opportunities for organizations in Kenya and East Africa.",
+  alternates: {
+    canonical: "https://web-mfik-eight.vercel.app/insights",
+  },
+  openGraph: {
+    title: "SUDMO Insights | Business, Technology & Growth Articles Kenya",
+    description:
+      "Read SUDMO Company Limited insights on business strategy, technology, finance and practical growth opportunities for organizations in Kenya and East Africa.",
+    url: "https://web-mfik-eight.vercel.app/insights",
+    type: "website",
+  },
+};
 
 export default async function InsightsPage() {
   const insights = await getPublishedInsights();

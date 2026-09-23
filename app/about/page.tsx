@@ -1,8 +1,25 @@
+import type { Metadata } from "next";
 import { getSettings } from "@/lib/queries";
 import { SectionHeader } from "@/components/SectionHeader";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "About SUDMO Company Limited | Business Development, IT & Supply Kenya",
+  description:
+    "Learn about SUDMO Company Limited in Nairobi, Kenya, including our objective, vision, mission, values and areas of operation in business development, IT, real estate, warehousing and supply.",
+  alternates: {
+    canonical: "https://web-mfik-eight.vercel.app/about",
+  },
+  openGraph: {
+    title: "About SUDMO Company Limited | Business Development, IT & Supply Kenya",
+    description:
+      "Learn about SUDMO Company Limited in Nairobi, Kenya, including our objective, vision, mission, values and areas of operation in business development, IT, real estate, warehousing and supply.",
+    url: "https://web-mfik-eight.vercel.app/about",
+    type: "website",
+  },
+};
 
 export default async function AboutPage() {
   const settings = await getSettings();

@@ -1,6 +1,23 @@
-﻿import Link from "next/link";
+﻿import type { Metadata } from "next";
+import Link from "next/link";
 import { CredibilityStrip } from "@/components/CredibilityStrip";
 import { HomeServiceNavigator } from "@/components/HomeServiceNavigator";
+
+export const metadata: Metadata = {
+  title: "SUDMO Company Limited | Business Development, IT, Real Estate & Supply Kenya",
+  description:
+    "SUDMO Company Limited provides business development and training, IT planning and development, real estate, warehousing, construction materials, computer equipment and electronics services in Kenya and East Africa.",
+  alternates: {
+    canonical: "https://web-mfik-eight.vercel.app/",
+  },
+  openGraph: {
+    title: "SUDMO Company Limited | Business Development, IT, Real Estate & Supply Kenya",
+    description:
+      "SUDMO Company Limited provides business development and training, IT planning and development, real estate, warehousing, construction materials, computer equipment and electronics services in Kenya and East Africa.",
+    url: "https://web-mfik-eight.vercel.app/",
+    type: "website",
+  },
+};
 
 export default async function HomePage() {
 
@@ -46,12 +63,12 @@ export default async function HomePage() {
                 <div className="rounded-[32px] border border-white/10 bg-slate-950/95 p-7">
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div className="rounded-3xl bg-white/5 p-5 text-sm text-slate-200">
-                      <p className="text-4xl font-semibold text-gold">12+</p>
-                      <p className="mt-2 uppercase tracking-[0.35em] text-slate-400">Years of market insight</p>
+                      <p className="text-4xl font-semibold text-gold">Market</p>
+                      <p className="mt-2 uppercase tracking-[0.35em] text-slate-400">Insight</p>
                     </div>
                     <div className="rounded-3xl bg-white/5 p-5 text-sm text-slate-200">
-                      <p className="text-4xl font-semibold text-gold">30+</p>
-                      <p className="mt-2 uppercase tracking-[0.35em] text-slate-400">Strategies delivered</p>
+                      <p className="text-4xl font-semibold text-gold">Strategic</p>
+                      <p className="mt-2 uppercase tracking-[0.35em] text-slate-400">Support</p>
                     </div>
                   </div>
                 </div>
@@ -61,6 +78,37 @@ export default async function HomePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="max-w-2xl">
+            <p className="text-sm uppercase tracking-[0.45em] text-slate-500">Products & supply</p>
+            <h2 className="mt-4 text-4xl font-semibold text-charcoal sm:text-5xl">Construction materials, computer equipment and electronics for growing operations.</h2>
+          </div>
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            {[
+              {
+                title: "Construction Materials",
+                description: "Practical supply support for projects and operations that require dependable materials and timely delivery.",
+              },
+              {
+                title: "Computer Equipment",
+                description: "Quality equipment for businesses seeking reliable productivity, office efficiency and digital readiness.",
+              },
+              {
+                title: "Electronics",
+                description: "Electronic solutions and supply support aligned to operational, business and project requirements.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-[30px] border border-slate-200 bg-slate-50 p-8 shadow-soft">
+                <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Supply</p>
+                <h3 className="mt-4 text-2xl font-semibold text-charcoal">{item.title}</h3>
+                <p className="mt-4 text-base leading-7 text-slate-600">{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
