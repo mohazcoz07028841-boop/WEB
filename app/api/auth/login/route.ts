@@ -27,6 +27,7 @@ export async function POST(request: Request) {
     name: "admin_token",
     value: token,
     httpOnly: true,
+    sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
     path: "/",
     maxAge: 8 * 60 * 60,
