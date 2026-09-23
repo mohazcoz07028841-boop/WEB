@@ -20,22 +20,29 @@ export function InquiryForm({ heading, intro, submitLabel }: { heading: string; 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      setStatus("error");
+      setMessage("Please complete all required fields before submitting.");
+      return;
+    }
+
     const data = new FormData(form);
     const payload = {
-      fullName: data.get("fullName"),
-      company: data.get("company"),
-      email: data.get("email"),
-      phone: data.get("phone"),
-      serviceRequired: data.get("serviceRequired"),
-      projectDescription: data.get("projectDescription"),
-      contactMethod: data.get("contactMethod"),
-      preferredDate: data.get("preferredDate"),
-      additionalInfo: data.get("additionalInfo"),
+      fullName: data.get("fullName")?.toString().trim(),
+      company: data.get("company")?.toString().trim() || "",
+      email: data.get("email")?.toString().trim(),
+      phone: data.get("phone")?.toString().trim(),
+      serviceRequired: data.get("serviceRequired")?.toString().trim(),
+      projectDescription: data.get("projectDescription")?.toString().trim(),
+      contactMethod: data.get("contactMethod")?.toString().trim(),
+      preferredDate: data.get("preferredDate")?.toString().trim(),
+      additionalInfo: data.get("additionalInfo")?.toString().trim() || "",
     };
 
-    if (!payload.fullName || !payload.email || !payload.phone) {
+    if (!payload.fullName || !payload.email || !payload.phone || !payload.serviceRequired || !payload.projectDescription || !payload.contactMethod || !payload.preferredDate) {
       setStatus("error");
-      setMessage("Please fill in your name, email and phone number.");
+      setMessage("Please complete all required fields before submitting.");
       return;
     }
 
@@ -86,7 +93,7 @@ export function InquiryForm({ heading, intro, submitLabel }: { heading: string; 
         <div className="grid gap-5 sm:grid-cols-2">
           <label className="space-y-2 text-sm font-medium text-slate-700">
             Service Required
-            <select name="serviceRequired" className="w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-midnight focus:ring-2 focus:ring-midnight/10">
+            <select name="serviceRequired" required className="w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-midnight focus:ring-2 focus:ring-midnight/10">
               <option value="">Select a service</option>
               {services.map((option) => (
                 <option key={option} value={option}>{option}</option>
@@ -95,7 +102,8 @@ export function InquiryForm({ heading, intro, submitLabel }: { heading: string; 
           </label>
           <label className="space-y-2 text-sm font-medium text-slate-700">
             Preferred Contact Method
-            <select name="contactMethod" className="w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-midnight focus:ring-2 focus:ring-midnight/10">
+            <select name="contactMethod" required className="w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-midnight focus:ring-2 focus:ring-midnight/10">
+              <option value="">Select a contact method</option>
               <option value="Email">Email</option>
               <option value="Phone">Phone</option>
               <option value="WhatsApp">WhatsApp</option>
@@ -105,11 +113,11 @@ export function InquiryForm({ heading, intro, submitLabel }: { heading: string; 
         <div className="grid gap-5 sm:grid-cols-2">
           <label className="space-y-2 text-sm font-medium text-slate-700">
             Preferred Consultation Date
-            <input name="preferredDate" type="date" className="w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-midnight focus:ring-2 focus:ring-midnight/10" />
+            <input name="preferredDate" type="date" required className="w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-midnight focus:ring-2 focus:ring-midnight/10" />
           </label>
           <label className="space-y-2 text-sm font-medium text-slate-700">
             Project Description
-            <input name="projectDescription" type="text" className="w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-midnight focus:ring-2 focus:ring-midnight/10" />
+            <input name="projectDescription" type="text" required className="w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-midnight focus:ring-2 focus:ring-midnight/10" />
           </label>
         </div>
         <label className="space-y-2 text-sm font-medium text-slate-700">
