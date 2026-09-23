@@ -41,7 +41,7 @@ export default async function AboutPage() {
               <div>
                 <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Our purpose</p>
                 <p className="mt-4 text-lg leading-8 text-slate-700">
-                  SUDMO Company Limited was incorporated on 16th July 2024 to provide quality services in real estate, business consultancy, information technology and the supply of electronics and computer equipment to fill identified market gaps.
+                  SUDMO Company Limited started in August 2024 to provide quality services in real estate, business consultancy, information technology and the supply of electronics and computer equipment to fill identified market gaps.
                 </p>
               </div>
               <div className="grid gap-5 sm:grid-cols-2">

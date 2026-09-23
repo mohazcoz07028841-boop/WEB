@@ -33,7 +33,7 @@ async function main() {
       twitterUrl: "#",
       heroHeading: "Unlock Possibilities, Ignite Solutions.",
       heroSubheading:
-        "SUDMO Company Limited was incorporated on 16th July 2024 to provide quality services in real estate, business consultancy, information technology, and quality electronics and computer equipment.",
+        "SUDMO Company Limited started in August 2024 to provide quality services in real estate, business consultancy, information technology, and quality electronics and computer equipment.",
       heroCta: "Talk to Our Team",
       heroSecondaryCta: "Explore Our Services",
       aboutIntro:
@@ -52,7 +52,7 @@ async function main() {
       twitterUrl: "#",
       heroHeading: "Unlock Possibilities, Ignite Solutions.",
       heroSubheading:
-        "SUDMO Company Limited was incorporated on 16th July 2024 to provide quality services in real estate, business consultancy, information technology, and quality electronics and computer equipment.",
+        "SUDMO Company Limited started in August 2024 to provide quality services in real estate, business consultancy, information technology, and quality electronics and computer equipment.",
       heroCta: "Talk to Our Team",
       heroSecondaryCta: "Explore Our Services",
       aboutIntro:
