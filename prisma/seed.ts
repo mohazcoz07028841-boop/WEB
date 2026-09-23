@@ -21,109 +21,77 @@ async function main() {
   await db.setting.upsert({
     where: { id: 1 },
     update: {
-      companyName: "Sudmo Company Limited",
-      tagline: "Building better businesses, properties and digital solutions.",
-      phone: "0713768539",
+      companyName: "SUDMO Company Limited",
+      tagline: "Unlock Possibilities, Ignite Solutions",
+      phone: "0713768539 / 0797087852",
       email: adminEmail,
-      address: "Nairobi, Kenya",
+      address: "P.O. Box 30031 - 00100, JAMIA – Nairobi, Kenya",
       businessHours: "Mon–Fri, 8:00–17:00",
       facebookUrl: "#",
       linkedinUrl: "#",
       instagramUrl: "#",
       twitterUrl: "#",
-      heroHeading: "Building Better Businesses, Properties & Digital Solutions.",
+      heroHeading: "Unlock Possibilities, Ignite Solutions.",
       heroSubheading:
-        "Professional solutions across real estate, technology, financial management, advisory and marketing — helping organizations plan better, operate smarter and grow with confidence.",
+        "SUDMO Company Limited was incorporated on 16th July 2024 to provide quality services in real estate, business consultancy, information technology, and quality electronics and computer equipment.",
       heroCta: "Talk to Our Team",
       heroSecondaryCta: "Explore Our Services",
       aboutIntro:
-        "We combine real estate, technology, finance and business advisory expertise to help East African organizations operate with clarity and confidence.",
+        "To provide clients with an 'I am assured experience' when executing their services, through professionalism, quality delivery and customer satisfaction across every engagement.",
     },
     create: {
-      companyName: "Sudmo Company Limited",
-      tagline: "Building better businesses, properties and digital solutions.",
-      phone: "0713768539",
+      companyName: "SUDMO Company Limited",
+      tagline: "Unlock Possibilities, Ignite Solutions",
+      phone: "0713768539 / 0797087852",
       email: adminEmail,
-      address: "Nairobi, Kenya",
+      address: "P.O. Box 30031 - 00100, JAMIA – Nairobi, Kenya",
       businessHours: "Mon–Fri, 8:00–17:00",
       facebookUrl: "#",
       linkedinUrl: "#",
       instagramUrl: "#",
       twitterUrl: "#",
-      heroHeading: "Building Better Businesses, Properties & Digital Solutions.",
+      heroHeading: "Unlock Possibilities, Ignite Solutions.",
       heroSubheading:
-        "Professional solutions across real estate, technology, financial management, advisory and marketing — helping organizations plan better, operate smarter and grow with confidence.",
+        "SUDMO Company Limited was incorporated on 16th July 2024 to provide quality services in real estate, business consultancy, information technology, and quality electronics and computer equipment.",
       heroCta: "Talk to Our Team",
       heroSecondaryCta: "Explore Our Services",
       aboutIntro:
-        "We combine real estate, technology, finance and business advisory expertise to help East African organizations operate with clarity and confidence.",
+        "To provide clients with an 'I am assured experience' when executing their services, through professionalism, quality delivery and customer satisfaction across every engagement.",
     },
   });
 
   const services = [
     {
-      title: "Real Estate Advisory",
-      slug: "real-estate",
-      category: "Real Estate",
-      summary: "Property advisory, development support and investment guidance for Kenyan and East African markets.",
-      details:
-        "We help investors, developers and property owners make better real estate decisions with market insight, project planning and asset management support.",
-    },
-    {
-      title: "IT Planning & Development",
-      slug: "it-development",
-      category: "Technology",
-      summary: "Strategy, software and systems that help businesses automate operations and improve decision-making.",
-      details:
-        "Our technology team delivers practical digital solutions, from business systems and web applications to digital transformation planning.",
-    },
-    {
-      title: "Financial Management",
-      slug: "financial-management",
-      category: "Finance",
-      summary: "Cash flow planning, reporting and financial management support for SMEs and corporates.",
-      details:
-        "We work with organisations to improve financial visibility, budgeting discipline and management reporting without making banking or audit claims.",
-    },
-    {
-      title: "Financial Advisory",
-      slug: "financial-advisory",
-      category: "Finance",
-      summary: "Business performance advisory to support financial decisions and sustainable growth.",
-      details:
-        "We provide financial guidance on planning, cash flow, budgeting and decision support so leaders can act with clarity and confidence.",
-    },
-    {
-      title: "Bookkeeping",
-      slug: "bookkeeping",
-      category: "Finance",
-      summary: "Organised transaction recording, reconciliation and monthly reporting for better control.",
-      details:
-        "Our bookkeeping services help businesses track revenue, manage expenses and maintain organised records for easy reporting.",
-    },
-    {
-      title: "Marketing Services",
-      slug: "marketing",
-      category: "Marketing",
-      summary: "Digital marketing and brand positioning that attracts customers and drives growth.",
-      details:
-        "We help organisations build campaigns, generate leads and retain customers with tailored digital marketing and positioning support.",
-    },
-    {
-      title: "Business Development & Training",
-      slug: "business-development",
+      title: "Business Development & Training Services",
+      slug: "business-development-and-training-services",
       category: "Business Advisory",
-      summary: "Corporate training, mentorship and business strategy for stronger organizations.",
+      summary: "Corporate training, mentorship and business strategy support for stronger organizations and sustainable growth.",
       details:
-        "Our business development services focus on capability building, corporate training and strategy to help leaders and teams grow sustainably.",
+        "We support businesses and entrepreneurs with practical business development and training solutions, helping them strengthen capabilities, improve operations and pursue new opportunities with confidence.",
     },
     {
-      title: "Warehousing Solutions",
-      slug: "warehousing",
-      category: "Operations",
-      summary: "Professional warehousing planning and logistics support for supply chain efficiency.",
+      title: "IT Planning & Development Services",
+      slug: "it-planning-and-development-services",
+      category: "Technology",
+      summary: "Strategy, software and digital systems that help businesses automate operations and improve decision-making.",
       details:
-        "We support businesses that require warehousing guidance while keeping the primary identity focused on services rather than product trading.",
+        "Our IT planning and development services focus on practical technology solutions including management information systems, website development and digital transformation support for organizations seeking sustainable efficiency.",
+    },
+    {
+      title: "Real Estate Services",
+      slug: "real-estate-services",
+      category: "Real Estate",
+      summary: "Property advisory, market insight and delivery support for investors, developers and institutions across the region.",
+      details:
+        "We provide real estate services designed to help clients make better property decisions, manage assets effectively and execute projects with strong operational oversight and market awareness.",
+    },
+    {
+      title: "Warehousing Services",
+      slug: "warehousing-services",
+      category: "Operations",
+      summary: "Professional warehousing planning and logistics support for supply chain efficiency and improved operations.",
+      details:
+        "Our warehousing services help organizations improve storage, handling and operational coordination while supporting better supply chain reliability and service quality.",
     },
   ];
 

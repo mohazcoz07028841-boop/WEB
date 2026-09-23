@@ -16,7 +16,7 @@ export default async function AboutPage() {
             title="A multidisciplinary partner for sustainable growth."
             description={
               settings?.aboutIntro ||
-              "We combine real estate, technology, finance, business and marketing expertise to help organizations in Kenya and East Africa achieve long-term results."
+              "To provide clients with an 'I am assured experience' when executing their services through professionalism, quality delivery and customer satisfaction across every engagement."
             }
           />
           <div className="mt-12 grid gap-10 lg:grid-cols-[0.75fr_0.8fr] lg:items-start">
@@ -24,15 +24,15 @@ export default async function AboutPage() {
               <div>
                 <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Our purpose</p>
                 <p className="mt-4 text-lg leading-8 text-slate-700">
-                  We support businesses, investors and institutions with professional guidance, strong delivery and the systems they need to grow with confidence.
+                  SUDMO Company Limited was incorporated on 16th July 2024 to provide quality services in real estate, business consultancy, information technology and the supply of electronics and computer equipment to fill identified market gaps.
                 </p>
               </div>
               <div className="grid gap-5 sm:grid-cols-2">
                 {[
-                  { title: "Accountability", description: "Responsibility and transparent communication in every engagement." },
-                  { title: "Quality Management", description: "Careful planning, review and consistent execution standards." },
-                  { title: "Honesty", description: "Clear, honest advice without overpromising." },
-                  { title: "Integrity", description: "Ethical conduct and trusted long-term partnerships." },
+                  { title: "Accountability", description: "We ensure accountability across the services and products we provide, building trust and confidence with current and prospective clients." },
+                  { title: "Quality Management", description: "We implement quality control in services and delivery processes to satisfy clients and strengthen our market position." },
+                  { title: "Honesty", description: "Honesty is applied in transactions, business engagements and service delivery at every level." },
+                  { title: "Integrity", description: "We maintain a high level of integrity in all engagements with partners, stakeholders and customers." },
                 ].map((item) => (
                   <div key={item.title} className="rounded-3xl bg-white p-6 shadow-sm">
                     <p className="text-base font-semibold text-charcoal">{item.title}</p>
@@ -43,13 +43,13 @@ export default async function AboutPage() {
             </div>
             <div className="space-y-8">
               <div className="rounded-[32px] border border-slate-200 bg-white p-10 shadow-soft">
-                <p className="text-sm uppercase tracking-[0.35em] text-slate-500">How we work</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Our focus</p>
                 <div className="mt-8 grid gap-6">
                   {[
-                    { label: "Discovery", text: "We begin by listening to your business context, goals and priorities." },
-                    { label: "Planning", text: "We craft a focused roadmap that balances ambition with practical delivery." },
-                    { label: "Execution", text: "We implement with precision, clarity and reliable timelines." },
-                    { label: "Support", text: "We stay engaged to maintain momentum and identify opportunities for improvement." },
+                    { label: "Objective", text: "To provide clients with an 'I am assured experience' through professional execution and timely delivery." },
+                    { label: "Vision", text: "To be the leading company in Kenya and across the East Africa Region." },
+                    { label: "Mission", text: "To partner with local and international stakeholders to deliver quality services and products in line with market standards." },
+                    { label: "Execution", text: "We implement a detailed plan, maintain supervision, and ensure health, safety and quality standards are upheld in every engagement." },
                   ].map((item) => (
                     <div key={item.label}>
                       <p className="text-sm uppercase tracking-[0.4em] text-slate-500">{item.label}</p>

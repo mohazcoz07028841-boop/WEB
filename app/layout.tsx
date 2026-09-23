@@ -9,13 +9,13 @@ import { PageTransition } from "@/components/PageTransition";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap", weight: ["400", "500", "600", "700", "800"] });
 
 export const metadata: Metadata = {
-  title: "Sudmo Company Limited | Professional Services Kenya",
+  title: "SUDMO Company Limited | Unlock Possibilities, Ignite Solutions",
   description:
-    "Sudmo Company Limited provides premium real estate, technology, finance, marketing and business advisory services across Kenya and East Africa.",
+    "SUDMO Company Limited provides quality real estate, business consultancy, information technology services, and supply of construction materials, computer equipment and electronics across Kenya and East Africa.",
   openGraph: {
-    title: "Sudmo Company Limited | Professional Services Kenya",
+    title: "SUDMO Company Limited | Unlock Possibilities, Ignite Solutions",
     description:
-      "Sudmo Company Limited provides premium real estate, technology, finance, marketing and business advisory services across Kenya and East Africa.",
+      "SUDMO Company Limited provides quality real estate, business consultancy, information technology services, and supply of construction materials, computer equipment and electronics across Kenya and East Africa.",
     type: "website",
   },
   metadataBase: new URL("https://horizonalliance.co.ke"),

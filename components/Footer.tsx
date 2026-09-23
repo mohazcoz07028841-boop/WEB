@@ -1,14 +1,10 @@
 import Link from "next/link";
 
 const services = [
-  { label: "Real Estate", href: "/services/real-estate" },
-  { label: "IT Development", href: "/services/it-development" },
-  { label: "Financial Management", href: "/services/financial-management" },
-  { label: "Financial Advisory", href: "/services/financial-advisory" },
-  { label: "Bookkeeping", href: "/services/bookkeeping" },
-  { label: "Marketing", href: "/services/marketing" },
-  { label: "Business Development", href: "/services/business-development" },
-  { label: "Warehousing", href: "/services/warehousing" },
+  { label: "Business Development & Training", href: "/services/business-development-and-training-services" },
+  { label: "IT Planning & Development", href: "/services/it-planning-and-development-services" },
+  { label: "Real Estate", href: "/services/real-estate-services" },
+  { label: "Warehousing", href: "/services/warehousing-services" },
 ];
 
 export function Footer() {
@@ -41,6 +37,8 @@ export function Footer() {
               <li>
                 <span className="block text-slate-400">Phone</span>
                 <a href="tel:0713768539" className="text-white hover:text-gold">0713768539</a>
+                <span className="mx-2 text-slate-400">/</span>
+                <a href="tel:0797087852" className="text-white hover:text-gold">0797087852</a>
               </li>
               <li>
                 <span className="block text-slate-400">Email</span>
@@ -48,7 +46,7 @@ export function Footer() {
               </li>
               <li>
                 <span className="block text-slate-400">Location</span>
-                Nairobi, Kenya
+                P.O. Box 30031 - 00100, JAMIA – Nairobi, Kenya
               </li>
             </ul>
           </div>

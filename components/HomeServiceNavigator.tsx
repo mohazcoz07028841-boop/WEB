@@ -5,55 +5,55 @@ import { useState } from "react";
 
 const services = [
   {
-    id: "real-estate",
+    id: "business-development-and-training-services",
+    label: "Business Development",
+    title: "Business development and training that strengthen capability and growth.",
+    summary:
+      "We help organizations build stronger teams, improve operations and unlock business opportunities through practical development and training support.",
+    bullets: [
+      "Corporate training and mentorship.",
+      "Business strategy and capability building.",
+      "Partnership development and market opportunity mapping.",
+      "Organizational growth support with clear execution plans.",
+    ],
+  },
+  {
+    id: "it-planning-and-development-services",
+    label: "IT Planning & Development",
+    title: "Technology solutions designed for business performance and operational clarity.",
+    summary:
+      "We support organizations with planning, development and digital systems that improve business processes and deliver measurable outcomes.",
+    bullets: [
+      "IT strategy and planning.",
+      "Website and management information systems.",
+      "Business process and workflow improvement.",
+      "Digital transformation support.",
+    ],
+  },
+  {
+    id: "real-estate-services",
     label: "Real Estate",
-    title: "Strategic property advisory and asset optimisation.",
+    title: "Strategic property support for better decisions and stronger returns.",
     summary:
-      "Position your portfolio for lasting value with disciplined real estate strategy, development support and property management.",
+      "Our real estate services help clients evaluate opportunities, plan effectively and manage property-related decisions with clarity and professionalism.",
     bullets: [
-      "Market insight for high-value decisions.",
-      "Property advisory and asset planning.",
-      "Development execution support.",
-      "Property management for long-term returns.",
+      "Market insight and property advisory.",
+      "Development support and project planning.",
+      "Asset and portfolio guidance.",
+      "Operational supervision and delivery oversight.",
     ],
   },
   {
-    id: "it-development",
-    label: "IT Development",
-    title: "Digital systems that accelerate business performance.",
+    id: "warehousing-services",
+    label: "Warehousing",
+    title: "Operational support for dependable storage and supply chain efficiency.",
     summary:
-      "Build secure, scalable technology solutions with a focus on operational efficiency, user experience and automation.",
+      "We provide warehousing support that helps businesses improve logistics coordination, storage management and service continuity.",
     bullets: [
-      "Technology strategy and roadmaps.",
-      "Web and business system development.",
-      "Automation and analytics integration.",
-      "Ongoing digital transformation support.",
-    ],
-  },
-  {
-    id: "financial-management",
-    label: "Financial Management",
-    title: "Operational finance for clearer, stronger decisions.",
-    summary:
-      "Improve cash flow, reporting and controls with financial systems designed for ambitious organizations.",
-    bullets: [
-      "Cash flow and liquidity planning.",
-      "Reporting and performance monitoring.",
-      "Budgeting and forecasting discipline.",
-      "Financial systems alignment with strategy.",
-    ],
-  },
-  {
-    id: "marketing",
-    label: "Marketing",
-    title: "Market growth through intelligent brand and demand strategy.",
-    summary:
-      "Attract, engage and convert with campaigns that reflect your company’s expertise and ambitions.",
-    bullets: [
-      "Brand position and narrative design.",
-      "Digital campaign planning and activation.",
-      "Lead generation with commercial focus.",
-      "Customer retention and growth frameworks.",
+      "Warehousing and logistics planning.",
+      "Operational coordination and oversight.",
+      "Supply chain efficiency support.",
+      "Service continuity and resource alignment.",
     ],
   },
 ];

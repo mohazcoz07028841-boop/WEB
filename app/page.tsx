@@ -12,13 +12,13 @@ export default async function HomePage() {
         <div className="relative mx-auto max-w-7xl px-6 py-24 sm:px-8 sm:py-28 lg:px-10">
           <div className="grid gap-16 lg:grid-cols-[1.05fr_0.9fr] lg:items-end">
             <div className="max-w-2xl space-y-8">
-              <p className="text-xs uppercase tracking-[0.55em] text-gold/80">REAL ESTATE • TECHNOLOGY • FINANCE • BUSINESS</p>
+              <p className="text-xs uppercase tracking-[0.55em] text-gold/80">REAL ESTATE • TECHNOLOGY • BUSINESS • SUPPLY</p>
               <div className="space-y-6">
                 <h1 className="text-5xl font-semibold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
-                  Building better businesses, properties & digital solutions.
+                  Unlock Possibilities, Ignite Solutions.
                 </h1>
                 <p className="max-w-xl text-lg leading-8 text-slate-200 sm:text-xl">
-                  A premium advisory partner for organisations seeking strategic clarity, commercial growth and lasting value across Kenya and East Africa.
+                  SUDMO Company Limited delivers quality real estate, business consultancy, information technology services and quality electronics and computer equipment to meet real market needs across Kenya and East Africa.
                 </p>
               </div>
               <div className="flex flex-col gap-4 sm:flex-row">
@@ -41,7 +41,7 @@ export default async function HomePage() {
               <div className="relative space-y-6">
                 <div className="rounded-[28px] bg-white/5 p-6 backdrop-blur-xl">
                   <p className="text-xs uppercase tracking-[0.4em] text-gold/80">Nairobi • East Africa</p>
-                  <p className="mt-4 text-xl font-semibold leading-8 text-white">Modern property, technology and finance solutions shaped for regional growth.</p>
+                  <p className="mt-4 text-xl font-semibold leading-8 text-white">Professional solutions shaped for regional growth, operational efficiency and long-term client confidence.</p>
                 </div>
                 <div className="rounded-[32px] border border-white/10 bg-slate-950/95 p-7">
                   <div className="grid gap-4 sm:grid-cols-2">
@@ -57,7 +57,7 @@ export default async function HomePage() {
                 </div>
                 <div className="rounded-[32px] bg-white/5 p-6 text-sm leading-7 text-slate-300">
                   <p className="uppercase tracking-[0.35em] text-slate-400">Insight</p>
-                  <p className="mt-3">We help clients move beyond short-term fixes to architect long-term performance across property, systems and finance.</p>
+                  <p className="mt-3">Our focus is on quality products, trusted execution and dependable partnership for clients across real estate, technology, business development, warehousing and supply services.</p>
                 </div>
               </div>
             </div>
@@ -231,7 +231,7 @@ export default async function HomePage() {
                 <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Ready to talk</p>
                 <h2 className="mt-4 text-4xl font-semibold">Let’s build what comes next.</h2>
                 <p className="mt-4 max-w-xl leading-8 text-slate-300">
-                  Whether you are planning a property project, improving business systems, strengthening financial management or growing your market presence, let’s talk.
+                  Whether you are planning a property project, improving business systems, strengthening financial management, sourcing quality construction materials, computer equipment or electronics, or growing your market presence, let’s talk.
                 </p>
               </div>
               <div className="flex flex-col gap-4 sm:flex-row lg:flex-col lg:items-end">

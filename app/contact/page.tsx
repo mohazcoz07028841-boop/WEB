@@ -21,9 +21,14 @@ export default async function ContactPage() {
               <div>
                 <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Contact details</p>
                 <div className="mt-6 space-y-4 text-sm leading-7 text-slate-700">
-                  <p><strong>Phone:</strong> <a href={`tel:${settings?.phone ?? "0713768539"}`} className="text-midnight">{settings?.phone ?? "0713768539"}</a></p>
+                  <p>
+                    <strong>Phone:</strong>{" "}
+                    <a href="tel:0713768539" className="text-midnight">0713768539</a>
+                    {" / "}
+                    <a href="tel:0797087852" className="text-midnight">0797087852</a>
+                  </p>
                   <p><strong>Email:</strong> <a href={`mailto:${settings?.email ?? "sudmocompany@gmail.com"}`} className="text-midnight">{settings?.email ?? "sudmocompany@gmail.com"}</a></p>
-                  <p><strong>Location:</strong> {settings?.address ?? "Nairobi, Kenya"}</p>
+                  <p><strong>Location:</strong> {settings?.address ?? "P.O. Box 30031 - 00100, JAMIA – Nairobi, Kenya"}</p>
                   <p><strong>Business hours:</strong> {settings?.businessHours ?? "Mon–Fri, 8:00–17:00"}</p>
                 </div>
               </div>
